@@ -1,0 +1,14 @@
+<div>
+  <organization-form style="float: left"></organization-form>
+  <input type="text" #searchtext placeholder="Search by name">
+  <button type="button" (click)="search(searchtext.value)">Search</button>
+    <accounts-ui></accounts-ui>
+  <ul>
+    <li *ngFor="#org of organizations">
+      <a [routerLink]="['/OrganizationDetails', {organizationId: org._id}]">{{org.name}}</a>
+      <p>{{org.country}}</p>
+      <p>{{org.UIDM}}</p>
+      <button (click)="removeOrganization(org)">X</button>
+    </li>
+  </ul>
+</div>

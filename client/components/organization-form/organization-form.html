@@ -1,0 +1,15 @@
+<form [ngFormModel]="organizationForm" #f="ngForm" (submit)="addOrganization(f.value)">
+  <label>Name</label>
+  <input type="text" ngControl="name">
+  <label>Country</label>
+  <input type="text" ngControl="country">
+  <label>UIDM</label>
+  <input type="text" ngControl="UIDM">
+  <label>Events Types</label>
+  <input type="text" ngControl="eventsTypes">
+  <label>Administrators</label>
+  <input type="text" ngControl="admins">
+  <button>Add</button>
+</form>
+
+<!--todo '?' button -->
