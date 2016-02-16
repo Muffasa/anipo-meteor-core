@@ -26,9 +26,11 @@ export class HomePage extends MeteorComponent{
             super();
          }
     test(){
-        debugger
-       let a2z_excel = Meteor.npmRequire('a2z-excel')
-       let xlsx = new  a2z_excel.Excel('xlsx')
-       console.log(JSON.stringify(xlsx))
+       // debugger
+       //var excel = new Excel('xls');
+       //this.call('testm','lolzi!')
+       this.call('excelTest')
+       
+       
     }     
 }
