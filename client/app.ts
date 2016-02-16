@@ -8,6 +8,10 @@ import {OrganizationList} from 'client/components/organization-list/organization
  
 import {OrganizationDetails} from 'client/components/organization-details/organization-details';
 
+import {EventFormPage} from 'client/components/event-form/event-form';
+ 
+import {HomePage} from 'client/components/home/home';
+
 
  
 @Component({
@@ -18,7 +22,9 @@ import {OrganizationDetails} from 'client/components/organization-details/organi
     directives: [ROUTER_DIRECTIVES]
 })
 @RouteConfig([
-    { path: '/', as: 'OrganizationList', component: OrganizationList },
+    { path: '/', as: 'HomePage', component: HomePage },
+    { path: '/EventFormPage', as: 'EventFormPage', component: EventFormPage },
+    { path: '/Organiztions', as: 'Organizations', component: OrganizationList },
     { path: '/organization/:organizationId', as: 'OrganizationDetails', component: OrganizationDetails }
 ])
 class Socially {}

@@ -5,6 +5,7 @@ interface Event {
   name: string
   superUsers: Array<SuperUser>
   users: Array<Meteor.User>
+  UIDMs: Array<UIDM>
   attendances: Array<Attendance>
   
   
