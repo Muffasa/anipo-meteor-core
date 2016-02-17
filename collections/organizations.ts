@@ -17,3 +17,4 @@ Organizations.allow({
     return !!user;
   }
 });
+

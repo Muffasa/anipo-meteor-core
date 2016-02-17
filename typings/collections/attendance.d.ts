@@ -1,18 +1,17 @@
-/// <reference path="../meteor/meteor.d.ts" />
 
 interface Attandance {
   _id?: string
-
+  creator: Master
   event: Event
-  superUser: Array<SuperUser>
-  date: Date
-  polygon: MapPolygon 
-  
-  participants: Array<User>
-  closingAt: Date
-  closingTime: Date
+  participants: Array<Participant>
+  creationDate: Date
+  location: {
+    lat: number
+    lng: number
+  }
+  radius: number
   isActive: boolean
+  closedDate: Date
+  upTime: number
   
-  additionalData?: any
-  description?: string;
 }
