@@ -8,10 +8,10 @@ import {Organizations} from 'collections/organizations';
     selector: 'organization-form'
 })
 @View({
-    templateUrl: '/client/components/organization-form/organization-form.html'
+    templateUrl: '/client/pages/dashboard/components/organization-form/organization-form.html'
 })
 export class OrganizationForm {
-    organizationForm: ControlGroup;
+    organizationForm: ControlGroup; 
  
     constructor() {
         var fb = new FormBuilder();

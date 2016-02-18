@@ -6,16 +6,16 @@ import {UploadXLSX} from 'client/components/upload-xlsx/upload-xlsx';
 
 
 import {MeteorComponent} from 'angular2-meteor';
- 
+
 @Component({
     selector: 'event-form'
 })
 @View({
     templateUrl: '/client/components/event-form/event-form.html',
-    directives: [RouterLink,UploadXLSX]
+    directives: [RouterLink, UploadXLSX]
 })
 export class EventFormPage extends MeteorComponent {
-    
-    constructor() {super()}
+
+    constructor() { super() }
 
 }

@@ -1,32 +1,33 @@
 import {Component, View} from 'angular2/core';
  
-import {Organizations} from 'collections/organizations';
- 
-import {OrganizationForm} from 'client/components/organization-form/organization-form';
-
-import {UploadXLSX} from 'client/components/upload-xlsx/upload-xlsx';
-
 import {RouterLink} from 'angular2/router';
- 
-import {AccountsUI} from 'meteor-accounts-ui';
+
+import {RequireUser, InjectUser} from 'meteor-accounts';
 
 import {MeteorComponent} from 'angular2-meteor';
+
+import {Organizations} from 'collections/organizations';
  
+import {OrganizationForm} from 'client/pages/dashboard/components/organization-form/organization-form';
+
 @Component({
     selector: 'organization-list'
 })
+
 @View({
-    templateUrl: '/client/components/organization-list/organization-list.html',
-    directives: [OrganizationForm, RouterLink, AccountsUI,UploadXLSX]
+    templateUrl: '/client/pages/dashboard/components/organization-list/organization-list.html',
+    directives: [OrganizationForm, RouterLink]
 })
+@InjectUser()
 export class OrganizationList extends MeteorComponent {
     organizations: Mongo.Cursor<any>;
  
     constructor() {
         super();
-        this.autorun(() => {
+            console.log("this.user: "+this.user);
             this.subscribe('organizations', () => {
-                this.organizations = Organizations.find({});
+                this.autorun(() => {
+                    this.organizations = Organizations.find({});
             })
         })
         

@@ -1,13 +1,22 @@
 {
-  "compilerOptions":{
+    "compilerOptions": {
         "experimentalDecorators": true,
-        "module": "system",
+        "module": "System",
         "target": "es5"
-        },
-  "files": [
-    "typings/main.d.ts",
-    "client/app.ts",
-    "server/main.ts"
-  ]
- }
-        
+    },
+    "files": [
+        "typings/angular2-meteor/angular2-meteor.d.ts",
+        "typings/collections/organization.d.ts",
+        "typings/collections/event.ts",
+        "typings/collections/attendance.ts",
+        "typings/collections/admin.ts",
+        "typings/collections/master.ts",
+        "typings/collections/participant.ts",
+        "typings/collections/credit.ts",
+        "typings/meteor-accounts/meteor-accounts-ui.d.ts",
+        "typings/meteor-accounts/meteor-accounts.d.ts",
+        "client/app.ts",
+        "server/main.ts",
+        "typings/angular2/core.d.ts"
+    ]
+}

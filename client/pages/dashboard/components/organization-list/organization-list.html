@@ -1,8 +1,6 @@
 <div>
-  <organization-form style="float: left"></organization-form>
   <input type="text" #searchtext placeholder="Search by name">
   <button type="button" (click)="search(searchtext.value)">Search</button>
-    <accounts-ui></accounts-ui>
   <ul>
     <li *ngFor="#org of organizations">
       <a [routerLink]="['/OrganizationDetails', {organizationId: org._id}]">{{org.name}}</a>
@@ -11,8 +9,4 @@
       <button (click)="removeOrganization(org)">X</button>
     </li>
   </ul>
-  <div>
-      <h4>upload-xlsx:</h4>
-      <upload-xlsx></upload-xlsx>
-  </div>
 </div>

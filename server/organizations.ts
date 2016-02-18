@@ -23,8 +23,8 @@ Meteor.publish('organizations', function() {
 });
  
 Meteor.publish('organization', function(organizationId) {
-    return Organizations.find(buildQuery.call(this, organizationId));
-    // return Organizations.find({_id:organizationId})
+    //return Organizations.find(buildQuery.call(this, organizationId));
+    return Organizations.find({_id:organizationId})
 });
 
 

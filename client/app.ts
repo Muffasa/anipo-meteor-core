@@ -1,17 +1,11 @@
-import {Component, View, NgZone, provide} from 'angular2/core';
- 
 import {bootstrap ,MeteorComponent} from 'angular2-meteor';
- 
+import {Component, View, NgZone, provide} from 'angular2/core';
 import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, APP_BASE_HREF} from 'angular2/router';
  
-import {OrganizationList} from 'client/components/organization-list/organization-list';
- 
-import {OrganizationDetails} from 'client/components/organization-details/organization-details';
-
+import {HomePage} from 'client/pages/home/home';
+import {DashboardPage} from 'client/pages/dashboard/dashboard';
+import {OrganizationDetails} from 'client/pages/dashboard/components/organization-details/organization-details';
 import {EventFormPage} from 'client/components/event-form/event-form';
- 
-import {HomePage} from 'client/components/home/home';
-
 
  
 @Component({
@@ -23,8 +17,8 @@ import {HomePage} from 'client/components/home/home';
 })
 @RouteConfig([
     { path: '/', as: 'HomePage', component: HomePage },
+    { path: '/DashboardPage', as: 'DashboardPage', component: DashboardPage },
     { path: '/EventFormPage', as: 'EventFormPage', component: EventFormPage },
-    { path: '/Organiztions', as: 'Organizations', component: OrganizationList },
     { path: '/organization/:organizationId', as: 'OrganizationDetails', component: OrganizationDetails }
 ])
 class Socially {}
