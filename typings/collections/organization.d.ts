@@ -1,22 +1,6 @@
-declare module OrganizationModule {
 
-    //User identifcation method
-    export enum UIDM {
-        Email,
-        Phone,
-        ID,
-        Finger
-    }
-    //User varification method
-    export enum UVM {
-        Email,
-        Phone,
-        Facebook,
-        Gmail,
-        Twitter
-        }
         
-    export interface Organization {
+interface Organization {
     _id?: string
     name: string
     owner: Admin
@@ -28,7 +12,7 @@ declare module OrganizationModule {
     participants: Array<Participant>
 
     creationDate: Date
-    }    
-}
+}    
+
 
 

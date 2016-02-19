@@ -1,7 +1,7 @@
 
  interface Master extends Meteor.User {
   name: string
-  organization: OrganizationModule.Organization
+  organization: Organization
   masters: Array<Master>
   participants: Array<Participant>
   attendances: Array<Attandance>

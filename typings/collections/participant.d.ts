@@ -1,7 +1,8 @@
+
 interface Participant extends Meteor.User {
-  UIDM: OrganizationModule.UIDM
+  UIDM: string
   name: string
-  organization: OrganizationModule.Organization
+  organization: Organization
   events: Array<Event>
   attendances: Array<Attandance>
   credits: Array<Credit>
