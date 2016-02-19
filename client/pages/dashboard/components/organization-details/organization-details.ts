@@ -29,4 +29,5 @@ export class OrganizationDetails extends MeteorComponent{
         }, true);
 
     }
+
 }

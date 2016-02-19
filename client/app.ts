@@ -18,7 +18,8 @@ import {EventFormPage} from 'client/components/event-form/event-form';
 @RouteConfig([
     { path: '/', as: 'HomePage', component: HomePage },
     { path: '/DashboardPage', as: 'DashboardPage', component: DashboardPage },
-    { path: '/EventFormPage', as: 'EventFormPage', component: EventFormPage },
+    { path: '/OrganizationUsersManagmantPage/:organizationId', as: 'OrganizationUsersManagmantPage', component: DashboardPage },
+    { path: '/OrganizationEventsManagmantPage/:organizationId', as: 'OrganizationEventsManagmantPage', component: DashboardPage },
     { path: '/organization/:organizationId', as: 'OrganizationDetails', component: OrganizationDetails }
 ])
 class Socially {}

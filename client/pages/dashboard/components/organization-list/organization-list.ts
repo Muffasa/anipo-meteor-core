@@ -24,12 +24,12 @@ export class OrganizationList extends MeteorComponent {
  
     constructor() {
         super();
-            console.log("this.user: "+this.user);
+            console.log("this.user: "+ JSON.stringify(this.user));
             this.subscribe('organizations', () => {
                 this.autorun(() => {
                     this.organizations = Organizations.find({});
             })
-        })
+        },true)
         
     }
  
