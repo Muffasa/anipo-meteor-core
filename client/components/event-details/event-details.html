@@ -1,0 +1,27 @@
+
+<div class="container" *ngIf="event">
+    <h2>Event Details</h2>
+    <div>
+        <label>Name:</label>
+        <p>{{event.name}}</p>
+    </div> 
+    <div>
+        <label>Organization:</label>
+        <p>{{event.organization}}</p>
+    </div> 
+    <div>
+        <label>Masters:</label><button>show</button>
+        <p>{{event.masters}}</p>
+    </div> 
+    <div>
+        <label>Participants:</label><button>show</button>
+        <p>{{event.participants}}</p>
+    </div> 
+    <div>
+        <label>Attendances:</label><button>show</button>
+        <p>{{event.attendances}}</p>
+    </div> 
+
+   <button [routerLink]="['/DashboardPage']">Back to Dashboard</button>
+</div> 
+

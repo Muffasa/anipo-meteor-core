@@ -42,7 +42,7 @@ export class OrganizationForm {
             Organizations.insert({
                 name: organization.name,
                 owner: this.user._id,
-                UIDM: organization.UIDM//.toLowerCase().split(' ')[0],
+                UIDM: organization.UIDM,//.toLowerCase().split(' ')[0],
                 UVM: organization.UVM//.toLowerCase().split(' ')[0]   
             },(err , result) => {
                 console.log("err: " + err)});

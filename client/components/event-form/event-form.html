@@ -1,7 +1,27 @@
-<div>
-    <h1>event-form</h1>
-    <div>
-        <h4>upload-xlsx:</h4>
-        <upload-xlsx></upload-xlsx>
-    </div>
-</div>
+
+<div class="container">
+    <h2>Create New Event</h2>
+ <form [ngFormModel]="eventForm" #f="ngForm" (submit)="addEvent(f.value)">
+    <div class="form-group">
+    <label>Organization</label>
+    <input type="text" ngControl="organization" disabled>
+    </div>  
+    <div class="form-group">
+    <label>Name</label>
+    <input type="text" ngControl="name">
+    </div> 
+    <div class="form-group">
+    <label>Masters</label>
+    <master-form></master-form>
+    <input type="text" ngControl="masters">
+    </div> 
+    <div class="form-group">
+    <label>Participants</label>
+    <participant-form></participant-form>
+    <input type="text" ngControl="participants">
+    </div>       
+
+    <button>Create</button>
+</form>
+   
+</div> 
