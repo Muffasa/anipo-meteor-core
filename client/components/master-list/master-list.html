@@ -1,4 +1,8 @@
 
 <div class="container">
-    <h5>master-list</h5>
+   <ul>
+    <li *ngFor="#master of masters">
+      <p>{{master.name}}</p>
+    </li>
+  </ul>
 </div> 
