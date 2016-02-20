@@ -1,15 +1,19 @@
 
         
+<<<<<<< Updated upstream
 interface Organization {
+=======
+    export interface IOrganization {
+>>>>>>> Stashed changes
     _id?: string
     name: string
-    owner: Admin
+    owner: string //Meteor.User _id
     UIDM: UIDM
     UVM: UVM
-    events: Array<Event>
-    permittedUsers: Array<Meteor.User> 
-    masters: Array<Master>
-    participants: Array<Participant>
+    eventsId: Array<string>//[id of Event]
+    permittedUsersId: Array<string>//[UIDM of premitted user] 
+    mastersId: Array<string>//[id of Master]
+    participantsId: Array<string>//[id of Participant]
 
     creationDate: Date
 }    

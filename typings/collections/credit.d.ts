@@ -1,8 +1,8 @@
 
  interface Credit {
   _id?: string
-  participant: Participant
-  attandance: Attandance
+  participantId: string//id of Meteor.User that contains ref to Participant
+  attandanceId: string//id of Attandance
   creationDate: Date
   location?:{
       lat: number
