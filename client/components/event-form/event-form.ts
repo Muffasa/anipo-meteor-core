@@ -14,6 +14,7 @@ import {Organizations} from 'collections/organizations';
 
 import {UploadXLSX} from 'client/components/upload-xlsx/upload-xlsx';
 import {MasterForm} from 'client/components/master-form/master-form';
+import {MasterList} from 'client/components/master-list/master-list';
 import {ParticipantForm} from 'client/components/participant-form/participant-form';
 
 @Component({
@@ -21,7 +22,7 @@ import {ParticipantForm} from 'client/components/participant-form/participant-fo
 })
 @View({
     templateUrl: '/client/components/event-form/event-form.html',
-    directives: [RouterLink, UploadXLSX,MasterForm,ParticipantForm]
+    directives: [RouterLink, UploadXLSX,MasterForm,MasterList,ParticipantForm]
 })
 export class EventFormPage extends MeteorComponent {
 

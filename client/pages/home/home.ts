@@ -12,6 +12,7 @@ import {MeteorComponent} from 'angular2-meteor';
 
 import {AccountsUI} from 'meteor-accounts-ui';
 
+import {IOrganization} from 'anipo-core-entities'
 
  
 @Component({
@@ -24,7 +25,7 @@ import {AccountsUI} from 'meteor-accounts-ui';
 export class HomePage extends MeteorComponent{
     
     organization_id: string
-    organization: any
+    organization: IOrganization
     
         constructor() {
             super();

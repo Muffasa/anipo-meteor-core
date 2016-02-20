@@ -1,27 +1,58 @@
-
 <div class="container">
     <h2>Create New Event</h2>
- <form [ngFormModel]="eventForm" #f="ngForm" (submit)="addEvent(f.value)">
-    <div class="form-group">
-    <label>Organization</label>
-    <input type="text" ngControl="organization" disabled>
-    </div>  
-    <div class="form-group">
-    <label>Name</label>
-    <input type="text" ngControl="name">
-    </div> 
-    <div class="form-group">
-    <label>Masters</label>
-    <master-form></master-form>
-    <input type="text" ngControl="masters">
-    </div> 
-    <div class="form-group">
-    <label>Participants</label>
-    <participant-form></participant-form>
-    <input type="text" ngControl="participants">
-    </div>       
+    <form [ngFormModel]="eventForm" #f="ngForm" (submit)="addEvent(f.value)">
+        <div class="form-group">
+            <label>Organization</label>
+            <input type="text" ngControl="organization" disabled>
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" ngControl="name">
+        </div>
+        <div class="form-group">
+            <label>Masters</label>
+            <div>
+                <!--collapsable shows the about to insert masters data,-->
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#masterList">Show Event Masters</button>
+                <hr>
+                <div id="masterList" class="collapse">
+                    <master-list></master-list>
+                </div>
+            </div>
 
-    <button>Create</button>
-</form>
-   
-</div> 
+            <div>
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#masterForm">Add new master</button>
+                <hr>
+                <div id="masterForm" class="collapse">
+                    <master-form></master-form>
+                </div>
+            </div>
+
+            <input [hidden]="true" type="text" ngControl="masters">
+        </div>
+        <div class="form-group">
+            <label>Participants</label>
+            <div>
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#participantList">Show Event Participants</button>
+                <hr>
+                <div id="participantList" class="collapse">
+                    <participant-list></participant-list>
+                </div>
+            </div>
+
+            <!--collapsablei .shows the about to insert participants data-->
+            <div>
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#participantForm">Add new Participants</button>
+                <hr>
+                <div id="participantForm" class="collapse">
+                    <participant-form></participant-form>
+                </div>
+            </div>
+
+            <input [hidden]="true" type="text" ngControl="participants">
+        </div>
+
+        <button>Create</button>
+    </form>
+
+</div>
