@@ -12,9 +12,9 @@
     }        
   name: string
   organizationId: string //id of Organization
-  eventsId: Array<string> //[id of Event]
-  attendancesId: Array<string>//[id of Attendance]
-  activitionCode: string
+  eventsId?: Array<string> //[id of Event]
+  attendancesId?: Array<string>//[id of Attendance]
+  activitionCode?: string
 
   creationDate: Date 
 }

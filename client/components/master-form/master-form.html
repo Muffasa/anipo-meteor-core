@@ -1,27 +1,27 @@
 
 <div class="container">
     <h5>Add New Master</h5>
- <form [ngFormModel]="masterForm" #f="ngForm" (submit)="addMaster(f.value)">
+ <form [ngFormModel]="masterForm" #f="ngForm" (submit)="addMasterToEventForm(f.value)">
     <div class="form-group">
-    <label>Organization</label>
-    <input type="text" ngControl="organization" disabled>
+    <label>Full Name</label>
+    <input type="text" ngControl="name">
     </div>  
     <div class="form-group">
-    <label>Name</label>
-    <input type="text" ngControl="name">
-    </div> 
-    <div class="form-group">
-    <label>Masters</label>
+    <label>Email</label>
     <master-form></master-form>
-    <input type="text" ngControl="masters">
+    <input type="email" ngControl="email">
     </div> 
     <div class="form-group">
-    <label>Participants</label>
-    <participant-form></participant-form>
-    <input type="text" ngControl="participants">
-    </div>       
+    <label>Phone Number</label>
+    <input type="text" ngControl="phone">
+    <!--<phone-input></phone-input>-->
+    </div> 
+    <div class="form-group">
+    <label>ID Number</label>
+    <input type="text" ngControl="ID">
+    </div>   
 
-    <button>Create</button>
+    <button>Add Master to event</button>
 </form>
    
 </div> 
