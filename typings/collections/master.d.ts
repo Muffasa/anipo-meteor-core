@@ -5,9 +5,9 @@
   email: string
   phone: {
       number: string
-      country:{
-          code: string
-          prefix: string
+      country?:{
+          code?: string
+          prefix?: string
           }
     }        
   name: string
