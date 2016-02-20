@@ -1,0 +1,9 @@
+<div>
+  <input type="text" #searchtext placeholder="Search by name"/>
+  <button type="button" (click)="search(searchtext.value)">Search</button>
+  <ul>
+    <li *ngFor="#event of events">
+      <p>{{org.name}}</p>
+    </li>
+  </ul>
+</div>

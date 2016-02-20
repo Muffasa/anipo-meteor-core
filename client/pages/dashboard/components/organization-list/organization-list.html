@@ -4,9 +4,7 @@
   <ul>
     <li *ngFor="#org of organizations">
       <a [routerLink]="['/OrganizationDetails', {organizationId: org._id}]">{{org.name}}</a>
-      <p>{{org.country}}</p>
-      <p>{{org.UIDM}}</p>
-      <button (click)="removeOrganization(org)">X</button>
+      <button (click)="removeOrganization(org)">Delete</button>
     </li>
   </ul>
 </div>

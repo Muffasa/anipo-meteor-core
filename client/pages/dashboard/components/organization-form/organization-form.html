@@ -1,15 +1,27 @@
-<form [ngFormModel]="organizationForm" #f="ngForm" (submit)="addOrganization(f.value)">
-  <label>Name</label>
-  <input type="text" ngControl="name">
-  <label>Country</label>
-  <input type="text" ngControl="country">
-  <label>UIDM</label>
-  <input type="text" ngControl="UIDM">
-  <label>Events Types</label>
-  <input type="text" ngControl="eventsTypes">
-  <label>Administrators</label>
-  <input type="text" ngControl="admins">
-  <button>Add</button>
-</form>
 
-<!--todo '?' button -->
+<div class="container">
+    
+ <form [ngFormModel]="organizationForm" #f="ngForm" (submit)="addOrganization(f.value)">
+    <div class="form-group">
+    <label>Name</label>
+    <input type="text" ngControl="name">
+    </div> 
+    <div class="form-group">
+    <label>User Identification Method</label><label>?</label>
+        <select class="form-control" ngControl="UIDM">
+            <option *ngFor="#m of uidms" [value]="m" [disabled]="m!='Email'">{{m}}</option>
+        </select>
+    </div>     
+    <div class="form-group">    
+    <label>User Validation Method</label><label>?</label>
+        <select class="form-control" ngControl="UVM">
+            <option *ngFor="#v of uvms" [value]="v" [disabled]="v!='Phone number'">{{v}}</option>
+        </select>
+    </div>   
+    <button>Create</button>
+</form>
+   
+</div> 
+
+
+<!--todo '?' button tooltip-->

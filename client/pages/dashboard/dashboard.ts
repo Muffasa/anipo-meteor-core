@@ -17,7 +17,7 @@ import {OrganizationForm} from 'client/pages/dashboard/components/organization-f
     directives: [ RouterLink,OrganizationList,OrganizationForm]
 })
 @InjectUser()
-@RequireUser()
+//@RequireUser()
 export class DashboardPage {
     
     constructor(){

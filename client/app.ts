@@ -5,7 +5,9 @@ import {ROUTER_PROVIDERS, ROUTER_DIRECTIVES, RouteConfig, APP_BASE_HREF} from 'a
 import {HomePage} from 'client/pages/home/home';
 import {DashboardPage} from 'client/pages/dashboard/dashboard';
 import {OrganizationDetails} from 'client/pages/dashboard/components/organization-details/organization-details';
+import {EventDetails} from 'client/components/event-details/event-details';
 import {EventFormPage} from 'client/components/event-form/event-form';
+import {OrganizationEventsManagmantPage} from 'client/pages/organization-events-managment/organization-events-managment';
 
  
 @Component({
@@ -18,8 +20,11 @@ import {EventFormPage} from 'client/components/event-form/event-form';
 @RouteConfig([
     { path: '/', as: 'HomePage', component: HomePage },
     { path: '/DashboardPage', as: 'DashboardPage', component: DashboardPage },
-    { path: '/EventFormPage', as: 'EventFormPage', component: EventFormPage },
-    { path: '/organization/:organizationId', as: 'OrganizationDetails', component: OrganizationDetails }
+    { path: '/OrganizationUsersManagmantPage/:organizationId', as: 'OrganizationUsersManagmantPage', component: DashboardPage },
+    { path: '/OrganizationEventsManagmantPage/:organizationId', as: 'OrganizationEventsManagmantPage', component: OrganizationEventsManagmantPage },
+    { path: '/OrganizationEventsManagmantPage/EventFormPage/:organizationId', as: 'EventFormPage', component: EventFormPage },
+    { path: '/organization/:organizationId', as: 'OrganizationDetails', component: OrganizationDetails },
+    { path: '/event/:eventId', as: 'EventDetails', component: DashboardPage }
 ])
 class Socially {}
  

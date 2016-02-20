@@ -1,8 +1,25 @@
-<div>
-    <h2>organization-details component:</h2>
-      <h3>{{organization.name}}</h3>
-      <p>{{organization.country}}</p>
-      <p>{{organization.UIDM}}</p>
-      <p>{{organization.eventTypes}}</p>
-      <button [routerLink]="['/DashboardPage']">Back</button>
-</div>
+
+<div class="container" *ngIf="organization">
+    <h2>Organization Details</h2>
+    <div>
+        <label>Name:</label>
+        <p>{{organization.name}}</p>
+    </div> 
+    <div>
+        <label>User Identification Method:</label>
+        <p>{{organization.UIDM}}</p>
+    </div> 
+    <div>
+        <label>User Validation Method:</label>
+        <p>{{organization.UVM}}</p>
+    </div> 
+    <div>
+        <label [routerLink]="['/OrganizationEventsManagmantPage', {organizationId: organization._id}]">Events:</label><button>+</button>
+        <!--<event-list [organizationId]="organization._id"></event-list>-->
+    </div> 
+    <div>
+        <label [routerLink]="['/OrganizationUsersManagmantPage', {organizationId: organization._id}]">Users</label>
+    </div> 
+   <button [routerLink]="['/DashboardPage']">Back</button>
+</div> 
+

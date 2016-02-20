@@ -13,7 +13,7 @@ import {MeteorComponent} from 'angular2-meteor';
 })
 @View({
     templateUrl: '/client/pages/dashboard/components/organization-details/organization-details.html',
-    directives: [RouterLink] 
+    directives: [RouterLink]//,EventList] 
 })
 export class OrganizationDetails extends MeteorComponent{
     
@@ -29,4 +29,5 @@ export class OrganizationDetails extends MeteorComponent{
         }, true);
 
     }
+
 }
