@@ -16,7 +16,7 @@
                 <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#masterList">Show Event Masters</button>
                 <hr>
                 <div id="masterList" class="collapse">
-                    <master-list></master-list>
+                    <master-list [masters]="eventModel.masters"></master-list>
                 </div>
             </div>
 
@@ -24,7 +24,7 @@
                 <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#masterForm">Add new master</button>
                 <hr>
                 <div id="masterForm" class="collapse">
-                    <master-form></master-form>
+                    <master-form (validMasterSubmited)="addMasterToEvent($event)"></master-form>
                 </div>
             </div>
 
@@ -36,9 +36,9 @@
                 <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#participantList">Show Event Participants</button>
                 <hr>
                 <div id="participantList" class="collapse">
-                    <participant-list></participant-list>
+                    <participant-list [participants]="eventModel.participants"></participant-list>
                 </div>
-            </div>
+            </div>  
 
             <!--collapsablei .shows the about to insert participants data-->
             <div>
