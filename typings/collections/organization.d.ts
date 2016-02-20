@@ -1,10 +1,7 @@
 
         
-<<<<<<< Updated upstream
-interface Organization {
-=======
-    export interface IOrganization {
->>>>>>> Stashed changes
+
+  interface IOrganization {
     _id?: string
     name: string
     owner: string //Meteor.User _id

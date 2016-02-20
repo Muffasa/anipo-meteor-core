@@ -1,13 +1,4 @@
-<<<<<<< Updated upstream
 
-interface Participant extends Meteor.User {
-  UIDM: string
-  name: string
-  organization: Organization
-  events: Array<Event>
-  attendances: Array<Attandance>
-  credits: Array<Credit>
-=======
 interface IParticipant {
   _id?: string
   UIDM: string
@@ -24,5 +15,5 @@ interface IParticipant {
   eventsId: Array<string> //[id of Event]
   attendancesId: Array<string>//[id of Attendance]
   creditsId: Array<string>//[id of Credit]
->>>>>>> Stashed changes
+
 }
