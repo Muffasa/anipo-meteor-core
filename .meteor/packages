@@ -21,3 +21,6 @@ barbatus:ng2-meteor-accounts
 cfs:standard-packages
 cfs:gridfs
 twbs:bootstrap
+netanelgilad:excel
+meteorhacks:async
+check
