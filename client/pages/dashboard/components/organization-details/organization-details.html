@@ -1,6 +1,10 @@
 
-<div class="container" *ngIf="organization">
+<div class="container" *ngIf="organization.owner">
     <h2>Organization Details</h2>
+    <div>
+        <label>Owner:</label>
+        <p>{{organization.owner.emails[0].address}}</p>
+    </div> 
     <div>
         <label>Name:</label>
         <p>{{organization.name}}</p>
