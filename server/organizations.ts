@@ -1,6 +1,7 @@
 import {Organizations} from 'collections/organizations';
 
 function buildQuery(organizationId?: string): Object {
+    debugger
     var isAvailable = {
         $and: [
             { ownerId: this.userId },

@@ -38,14 +38,21 @@
                 <div id="participantList" class="collapse">
                     <participant-list [participants]="eventModel.participants"></participant-list>
                 </div>
-            </div>  
+            </div>
 
             <!--collapsablei .shows the about to insert participants data-->
             <div>
-                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#participantForm">Add new Participants</button>
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#participantForm">Add new Participant</button>
                 <hr>
                 <div id="participantForm" class="collapse">
-                    <participant-form></participant-form>
+                    <participant-form ></participant-form>
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#participantsXlsx">Add new Participants</button>
+                <hr>
+                <div id="participantsXlsx" class="collapse">
+                    <upload-xlsx (jsonReady)="addParticipantsToEvent($event)"></upload-xlsx>
                 </div>
             </div>
 

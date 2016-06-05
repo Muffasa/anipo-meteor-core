@@ -22,9 +22,9 @@ export class Populator extends MeteorComponent {
 
             }
             else {
-                this.call(`populate_${field}`, rawObj[field], (err,data) => {
+                this.call(`populate_${field}`, rawObj[field], (err, data) => {
                     console.log(`populate_${field} data: ${data}, err: ${err}`);
-                    result[field.replace('Id','')]=data
+                    result[field.replace('Id', '')] = data
                     resolve(result)
 
                 })

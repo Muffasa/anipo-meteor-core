@@ -35,7 +35,7 @@ declare namespace anipoCoreEntitiesModule {
     export interface IOrganization {
         _id?: string
         name: string
-        owner: string //Meteor.User _id
+        ownerId: string //Meteor.User _id
         UIDM: UIDM
         UVM: UVM
         eventsId: Array<string>//[id of Event]

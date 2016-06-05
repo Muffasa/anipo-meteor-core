@@ -10,6 +10,8 @@ import {MeteorComponent} from 'angular2-meteor';
 
 import {Populator} from 'client/services/populator';
 
+import {CurrentOrganization} from 'client/services/current-organization'
+
 @Component({
     selector: 'organization-details'
 })
@@ -21,9 +23,11 @@ export class OrganizationDetails extends MeteorComponent {
 
     organization: any = {}
 
-    constructor(params: RouteParams, populator: Populator) {
+    constructor(params: RouteParams, populator: Populator, org:CurrentOrganization) {
         super();
         let organizationId = params.get('organizationId');
+        
+        
         this.subscribe('organization', organizationId, () => {
             this.autorun(() => {
                 let rawOrganization = Organizations.findOne(organizationId);
@@ -32,6 +36,7 @@ export class OrganizationDetails extends MeteorComponent {
                 populator.populate(rawOrganization, 'ownerId').then((result)=>{
                     this.organization = result
                     console.log('this.organization: ' + JSON.stringify(this.organization))
+                    org.set(this.organization)
                 })
                 
 

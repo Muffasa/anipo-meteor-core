@@ -1,9 +1,10 @@
-import {Component, View} from 'angular2/core';
+import {Component, View, Output, EventEmitter} from 'angular2/core';
 
 import {MeteorComponent} from 'angular2-meteor';
 
 import {Files} from 'collections/files'
 
+import {CurrentOrganization} from 'client/services/current-organization'
 @Component({
     selector: 'upload-xlsx'
 })
@@ -11,8 +12,9 @@ import {Files} from 'collections/files'
     templateUrl: '/client/components/upload-xlsx/upload-xlsx.html'
 })
 export class UploadXLSX extends MeteorComponent {
+    @Output() jsonReady = new EventEmitter()
 
-    constructor() {
+    constructor(public org:CurrentOrganization) {
         super()
     }
 
@@ -50,6 +52,26 @@ export class UploadXLSX extends MeteorComponent {
 
         })
 
+    }
+    uploadExcelFile(event) {
+        let file = event.target.files[0]
+        let currentOrg = this.org.get()
+        console.log(`currentOrg: ${currentOrg}`);
+        
+
+        var reader = new FileReader();
+        reader.onload = (fileLoadEvent) => {
+            this.call('excelFileValidation', event.target.value, reader.result ,currentOrg, function(error, result) {
+                console.log('excelFileValidation resolved')
+                if(error){
+                    alert(error)
+                }    
+                else{
+                    this.jsonReady.emit(result)
+                }
+            });
+        };
+        reader.readAsBinaryString(file);
     }
 
 }

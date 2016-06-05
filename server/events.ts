@@ -2,6 +2,7 @@ import {Organizations} from 'collections/organizations';
 import {Events} from 'collections/events';
  
 function buildQuery(organizationId?: string): Object {
+    debugger
     var isAvailable = {
                 $or: [
                     { owner: this.userId },

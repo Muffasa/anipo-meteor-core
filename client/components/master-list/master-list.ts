@@ -21,7 +21,7 @@ export class MasterList extends MeteorComponent {
     @Input() masters: Array<IMaster>
     
 
-    constructor() {
+    constructor() {//TODO editable
         super()
         if (this.eventId) {
             this.subscribe('eventMasters', this.eventId, () => {
